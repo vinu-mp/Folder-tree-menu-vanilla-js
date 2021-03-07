@@ -1,0 +1,33 @@
+.folder-wrapper ul {
+  list-style-type: none;
+  display: block;
+}
+
+.folder {
+  cursor: pointer;
+}
+
+.folder::before {
+  content: '\f07b';
+}
+
+.file::before {
+  content: '\f15b';
+}
+
+.spec::before{
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  margin-right: 6px;
+  font-family:'FontAwesome';
+}
+ul  ul {
+  max-height: 0;
+  overflow:hidden;
+  transition: max-height .25s ease-out;
+}
+
+li.active > ul {
+  max-height: 999px;
+}
